@@ -1,14 +1,20 @@
+<%# This application file is run for every page loaded%>
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Omrails2</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+	  <title>One Month Rails 2</title>
+	  <%= stylesheet_link_tag    "application", :media => "all" %>
+	  <%= javascript_include_tag "application" %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		
+		<%= render 'layouts/header' %>
+		<%# This is where yield takes the content of the views and spits it out%>
+		<div class="container">
+			<%= yield %>
+			<%= render 'layouts/footer' %>
+		</div>
 
-<%= yield %>
-
-</body>
+	</body>
 </html>
